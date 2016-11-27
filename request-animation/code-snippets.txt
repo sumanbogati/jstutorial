@@ -1,0 +1,34 @@
+Request animation frame
+
+1code
+<pre class="brush: js;">
+ function draw() {
+	console.log('Your draw code is executed here..');
+	requestAnimationFrame(draw);
+}
+draw();
+</pre>
+
+
+
+2code
+<pre class="brush: js;">
+function draw() {
+	console.log('Your draw code is executed here..');
+	requestAnimationFrame(draw);
+}
+draw();
+</pre>
+
+3code
+<pre class="brush: js;">
+setInterval(
+	function (){
+		console.log('Your draw code is executed here..');
+	}, (1000/60)
+);
+</pre>
+
+
+
+
