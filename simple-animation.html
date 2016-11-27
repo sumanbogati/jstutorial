@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Request Animation Frame</h1>
+
+<button type="button" onclick="startAnimation()"> Start Animation </button>
+
+<script>
+	var fps = 60;
+	function draw() {
+		totalFrame++;
+		//console.log('frame under a second ' + fps);
+	}
+	var totalFrame = 0;
+	
+ 	function startAnimation(){
+		setInterval(draw, (1000 / fps ));
+		countFPS();
+	}
+
+    function countFPS (){
+		setInterval(
+			function (){
+				console.log('Total executed frames are ' + (totalFrame) + ' in a second.');
+				totalFrame  = 0;
+			}, 1000
+		);
+	}
+</script>
+
+</body>
+</html> 
