@@ -1,3 +1,7 @@
+/*
+Written by Suman Bogati 
+sumanbogati@gmail.com
+*/
 window.onload = function (){
 	var bandWidthSpeed = {
 		downloadSize : 1500000, //1MB
