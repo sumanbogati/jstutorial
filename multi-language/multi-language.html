@@ -1,0 +1,29 @@
+<!-- 
+    @Author  Suman Bogati (sumanbogati@gmail.com)
+	http://jsgyan.blogspot.in/
+    https://github.com/sumanbogati
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Multi Lnaguage Files in JavaScript</title>
+<body>
+	<button onclick="loadDemo('en')">Greeting in English</button> 
+	<button onclick="loadDemo('fr')">Greeting in France</button> 
+	<div id="langResult"></div>
+</body>
+
+<script type="text/javascript" src="lang.js"> </script>
+<script>
+	function loadDemo(ltype){
+		lang.init(ltype, afterLangLoad);
+	}
+	function afterLangLoad(){
+		var msg = lang.getString('greeting') + " <br />";
+		msg += lang.getString('itemnotfound', ["VCR", "DVD"]); 
+		document.querySelector('#langResult').innerHTML = msg; 
+	}
+
+</script>
+</html>
