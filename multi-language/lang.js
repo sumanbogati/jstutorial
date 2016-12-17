@@ -11,7 +11,8 @@ var lang = {
 		this.type = type;
 		var stag = document.createElement("script");
 		stag.type = 'text/javascript';
-		stag.src = type+".js";
+		// you can replace the below url with your
+		stag.src = "https://rawgit.com/sumanbogati/jstutorial/master/multi-language/" + type+".js";
 		document.querySelector("head").appendChild(stag);
 		stag.onload = function (){
 			afterLoad();
