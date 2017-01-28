@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<title></title>
+		<script>
+			var getColor = function (color){
+				var color  = color; 
+				var display = function(){ 
+					var color2 = "green";
+					console.log('Color are ' + color +  ' and ' + color2);
+				}
+				return display;
+			}
+			
+			var colorObj1 = new getColor('red');
+			var colorObj2 = new getColor('blue');
+			
+			colorObj1('yellow');
+			colorObj2('geeen'); 
+		</script>
+	</head>
+<body>
+	
+</body>
+</html>

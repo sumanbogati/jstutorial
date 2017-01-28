@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<title></title>
+		<script>
+
+			function display(color){
+				console.log('color is ' + color);
+			}
+			
+			var getColor = function (){
+				var onColors = [];
+				var colors  = ['red', 'green', 'blue']; 
+				for(var i=0; i<colors.length; i++){
+					let color = colors[i];
+					onColors[i] = function (){
+						display(color);
+					}
+				}
+				return  onColors;
+			}
+			
+			var onColors = new getColor();
+			onColors[0]();
+		</script>
+	</head>
+<body>
+	
+</body>
+</html>
