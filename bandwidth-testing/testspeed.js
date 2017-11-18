@@ -38,7 +38,7 @@ var bandWidthSpeed = {
 /** Initialize the process to bandwidth checking **/
 document.getElementById('bandWidthCheck').addEventListener('click', function (){
     var result = document.querySelector("#bandWidthSpped .result");
-    result.innerHTML = "Waiting....";
+    result.innerHTML = "Calculatig....";
     bandWidthSpeed.measure(function (speedKbps){
             result.innerHTML = speedKbps + " Kbps";
         });
